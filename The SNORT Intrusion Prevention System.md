@@ -1,7 +1,7 @@
 # The SNORT  Intrusion Prevention System
 Saturday,  March 5, 2022 (By Ibrahim Tamim) 
 
-This document covers a general overview of Intrusion Prevention Systems (IPSs). Specifaclly, it will covers SNORT, which is the world's leading open-source IPS. You can access a PDF  of the slides discussing this topic [here](http://youtube.com/). 
+This document covers a general overview of Intrusion Prevention Systems (IPSs). Specifaclly, it will covers SNORT, which is the world's leading open-source IPS. You can access a PDF  of the slides discussing this topic [here](https://drive.google.com/file/d/17ToyS5l5TKQQMGoqyXM2DUwROY6mCK6t/view?usp=sharing). 
 
 The document first covers what network intrusion are and examples of such attacks to clearly highlight the problem and the need for counter measures such as IPSs. Then, it will discuss IPSs in general and the differences between IPSs, Intrusion Detection Systems (IDSs), and Firewalls. Finally, it will discuss SNORT and go through example Denial of Service (DoS) attacks and how to defend against them using SNORT.
 ## Introduction 
