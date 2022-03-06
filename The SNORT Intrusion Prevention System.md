@@ -96,9 +96,13 @@ alert tcp any any -> any any (msg: "Land attack detected"; flags:S; sameip; sid:
 Below are the descriptions for different SNORT rule components for this examples and all the following ones. 
 
 **"msg":** display a message corresponding to the detected alert. 
+
 **"flags":** flags that this detected attack will activate. "S" flag is the TCP SYN flag. 
+
 **"sameip":** to check if the source IP is the same as the destination IP. 
+
 **"sid":** the unique id for the SNORT rule.
+
 **"rev":** to identify the revisions of the SNORT rule.
 
 
@@ -111,8 +115,11 @@ alert tcp any any -> 192.168.1.3 any (msg:"TCP SYN flood attack detected"; flags
 ```
 
 **"threshold ":** number detections that must occur per minute for an event to be logged.
+
 **"track by_dst":** the destination IP to track by. 
+
 **"count":** the count of the number of events. 
+
 **”seconds”:** the time frame for counting the number of events.
 
 
