@@ -1,7 +1,7 @@
 # The SNORT  Intrusion Prevention System
 Saturday,  March 5, 2022 (By Ibrahim Tamim) 
 
-This document covers a general overview of Intrusion Prevention Systems (IPSs). Specifaclly, it will covers SNORT, which is the world's leading open-source IPS. You can access a PDF  of the slides discussing this topic [here](https://drive.google.com/file/d/17ToyS5l5TKQQMGoqyXM2DUwROY6mCK6t/view?usp=sharing). 
+This document covers a general overview of Intrusion Prevention Systems (IPSs). Specifically, it will covers SNORT, which is the world's leading open-source IPS. You can access a PDF  of the slides discussing this topic [here](https://drive.google.com/file/d/17ToyS5l5TKQQMGoqyXM2DUwROY6mCK6t/view?usp=sharing). 
 
 The document first covers what network intrusion are and examples of such attacks to clearly highlight the problem and the need for counter measures such as IPSs. Then, it will discuss IPSs in general and the differences between IPSs, Intrusion Detection Systems (IDSs), and Firewalls. Finally, it will discuss SNORT and go through example Denial of Service (DoS) attacks and how to defend against them using SNORT.
 ## Introduction 
@@ -13,13 +13,13 @@ An attacker may penetrate the network by having physical access to a restirred m
 
 An intruder can gain access for a targeted one-time attack (e.g., injecting malware) or they can “live” in the network for extend periods of time (carrying different attack and staling information).
 
-*for more information about INetwork Intrusions you can visit [this](https://www.sciencedirect.com/topics/computer-science/network-intrusion) link.*
+*for more information about Network Intrusions you can visit [this](https://www.sciencedirect.com/topics/computer-science/network-intrusion) link.*
 
 
 # Network Intrusion Attacks
 There are several attack types intruders can use to gain unauthorized access to the network, below are examples of the most common attacks. 
 
-- **Multi-Routing:** This attacks depends on asymmetric routing. A network must have asymmetric routing enabled for an attacker to attack the network using many different malicious packets through different routes which hinders some of the firewall’s defenses.
+- **Multi-Routing:** This attack depends on asymmetric routing. A network must have asymmetric routing enabled for an attacker to attack the network using many different malicious packets through different routes which hinders some of the firewall’s defenses.
 - **Buffer Overwriting/Overflowing:** If malicious code can carry a buffer Overwriting/Overflowing attack on machines that are present in the target network, they can inject code that allows for malicious packets to penetrate the network by adding bypass rules to the network’s defenses (Firewalls, IDSs, IPSs).
 - **Covert CGI Scripts:** One of the most common entry points for network attackers is the Common Gateway Interface (CGI). Attackers use the CGI to access system files. This is possible as the CGI is used to allow servers to pass requests by the users to relevant applications and vice versa. By accessing system files and directories, attackers inject malicious scripts that can facilitate their penetration of the network. However, as this attack was really common, today, much fewer devices provide CGI..
 - **Traffic Flooding:** By overwhelming the network with massive amounts of traffic, the network’s defenses become unable to process all the traffic which either crashes the defense services creating errors that malicious attacks can hide behind, or malicious packets will slip under the massive traffic being sent to the network. 
@@ -29,11 +29,11 @@ There are several attack types intruders can use to gain unauthorized access to 
 
 
 ## Intrusion Prevention System (IPS)
-To counter netwrok intrusions by detecting and taking actions agaisnt malicuous requests and access attemps netwrok implement a IPS secuiryt function. 
+To counter network intrusions by detecting and taking actions against malicious requests and access attempts, networks implement an IPS security function.
 IPSs are security tools that are tasked with continuously monitoring the network for any penetration attempts or malicious request/activities. IPSs also act against any detected intrusion attempt. These actions include reporting, blocking or dropping the detected requests. IPSs can be hardware-based network functions or software-based network functions. 
 
 
-- **Signature-Based:** Well-known threats have clearly identified signatures. This methods tries to detect these signatures to identify the threat. A major limitation for such an approachis new threats/attacks (unknown signatures). 
+- **Signature-Based:** Well-known threats have clearly identified signatures. This method tries to detect these signatures to identify the threat. A major limitation for such an approach are new threats/attacks (unknown signatures).
 
 - **Anomaly-Based:** A baseline standard of the subject network must first be defined. The method will identify any suspicious or anomalous behaviors in the network’s traffic. A drawback for such an approach is that it produces false positives. 
 
@@ -83,9 +83,9 @@ cd snort-2.9.19
 |Smurf Attack            |A type of DoS attack in which a system is flooded by a large number of Internet Control Message Protocol (ICMP) packets, rendering the victim’s network unresponsive.|
 |Ping of Death	|A DoS attack in which an attacker attempts to crash a system by sending malformed or oversized packets, using a ping command.|
 
-You can access the full table and more inforamtion about these attacks [here](https://www.exabeam.com/ueba/ips-security-how-active-security-saves-time-and-stop-attacks-in-their-tracks/).
+You can access the full table and more information about these attacks [here](https://www.exabeam.com/ueba/ips-security-how-active-security-saves-time-and-stop-attacks-in-their-tracks/).
 
-## Detailed Examples of SNORT Rules to defend agaisnt DoS Attacks
+## Detailed Examples of SNORT Rules to defend against Denial of Service (DoS) Attacks
 ###  **1.** Land Attacks
 - **What is the attack?** It’s an attack that results in the subject machine requesting to connect to itself continuously. This is achieved when the attacker first spoofs then resends a TCP SYN packet to the machine with all sources and destinations set as those of the subject machine. 
 - **SNORT Rule for Land Attacks** 
